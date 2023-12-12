@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeApp</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+<body>
+<h1>App Home Page Being rendered from templates folder</h1>
+<h3> Namratha</h3>
+Enter ur full name<input type="text"> <br>
+<input type ="button" name="Click Me" value="click me"> <br>
+
+<h3> My level of Thinking is at {{insert_me}}</h3>
+<h4> We can look at ourself as a spike of dust or some one made out of {{sr}} and very special</h4>
+<img  src ="{% static 'images/galxy.jpeg'%}">
+
+<h4>did you know there are {{n}} stars in our milky way galaxy</h4>
+<form method="POST">
+    {{form.as_p}}
+    {% csrf_token %}
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>
